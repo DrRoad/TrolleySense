@@ -2,9 +2,8 @@
 #include <WiFiClient.h> 
 #include <ESP8266WebServer.h>
 
-/* Set these to your desired credentials. */
 const char *ssid = "ConTrolley";
-const char *password = "thereisnospoon";
+const char *password = "makeawok";
 
 const int trigPin = 5;
 const int echoPin = 4;
@@ -15,12 +14,9 @@ const int echoPin2 = 2;
 
 int distance, distance2;
 
-bool sensor1Activated = false, sensor2Activated = false;
+bool sensor1Activated = false, sensor2Activated = false, secondChecked = false;
 
 int countIncoming = 0, countOutgoing = 0;
-
-const long interval = 250;
-unsigned long previousMillis = 0;
 
 ESP8266WebServer server(80);
 
@@ -89,24 +85,30 @@ void loop() {
 
   while(sensor1Activated == true && sensor2Activated == false){
     server.handleClient();
-    if(getDistanceFromSensor(trigPin2, echoPin2) <= 15){
-      Serial.println("ENTERED");
+    if(!secondChecked && getDistanceFromSensor(trigPin2, echoPin2) <= 15){
+      Serial.println("Entered In");
+      secondChecked = true;
+    }else if(secondChecked && getDistanceFromSensor(trigPin2, echoPin2) >= 15){
+      Serial.println("Entered Out");
       sensor1Activated = false;
       sensor2Activated = false;
+      secondChecked = false;
       countIncoming += 1;
-      delay(250);
       break;
     }
   }
 
   while(sensor2Activated == true && sensor1Activated == false){
     server.handleClient();
-    if(getDistanceFromSensor(trigPin, echoPin) <= 15){
-      Serial.println("EXITING");
+    if(!secondChecked && getDistanceFromSensor(trigPin, echoPin) <= 15){
+      Serial.println("Exiting In");
+      secondChecked = true;
+    }else if(secondChecked && getDistanceFromSensor(trigPin, echoPin) >= 15){
+      Serial.println("Exiting Out");
       sensor1Activated = false;
       sensor2Activated = false;
-      countOutgoing += 1;
-      delay(250);
+      secondChecked = false;
+      countIncoming += 1;
       break;
     }
   }
