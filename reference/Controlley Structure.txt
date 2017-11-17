@@ -1,0 +1,48 @@
+Servicio al Público
+	_Public
+		Mapa/@Mapa
+			Trolleys
+				ID
+				Nombre
+				Foto
+				Geo
+				ETA
+			Estaciones
+				ID
+				Nombre
+				Foto
+				Geo
+				ETA
+			Rutas
+				Duracion
+				Hora de inicio
+				Hora de cierre
+			Lugares de interés
+Controlley
+	_Public
+		Home
+		Products
+		Services
+		Login
+		Sign Up
+	_Private
+		Crear compañía
+		Registrarse en compañía
+		Administrar compañía
+			Conductores (CRUD)
+			Vehículos (CRUD)
+			Rutas (CRUD)
+			Paradas (CRUD)
+		Datos Recopilados
+			Conductores
+
+			Vehículos
+
+			Rutas
+
+			Paradas
+
+			Lugares de interés
+
+		Lugares de interés (CRUD)
+			Promover

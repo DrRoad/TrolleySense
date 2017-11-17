@@ -1,0 +1,72 @@
++ Hackaton +
+API
+	App needs
+	Statistics needs
+Admins statistics panel
+	Timestamps + @ every stop
+		Hours in transit
+		AVR Speed
+		AVR Occupancy
+	Log-in?
+App users
+	Vehicles list
+		Location
+		Get user's curr loc
+	Vehicle
+		Current location
+		MPH
+		ETA
+		Seats available
+Device in seat
+	Emergency button
+	Sitting status
+Device, main
+	Person stood up in transit
+Network
+	Autoconnect
+	ID devices
+		Signal Strengh
+	Ping Path
+	
+-=-=-=-=-=-=-=-=-=-
+
+Arduino UNO
+Accelerómetro
+Ultrasounds
+GPS
+WiFi
+Batería
+
+-=-=-=-=-=-=-=-=-=-
+
+
+Reglas
+4 ppl x eq-p
+
+Ideas
+Casco Urbano / Distrito central
+Turismo
+Permisos
+Transporte colectivo	
+Sandra torres planificadora cartografía
+Servicios técnicos, sistema eléctrico
+Delgado dir informática
+Manejo de Emergemcias
+Terminales c públicos, estacionamientos privados de ofcinas
+Recreación y deportes
+
+Mobilidad
+	Trolleys Transportación
+	Manejo desperdicio, zafacones, trucks
+	Aquíferos
+	Energía
+	Entreteminiemto
+	Trafico
+	Temperatura
+	CO2
+
+Prototipo de immersion que personas
+Programa de startups de Engine-4
+
+LASER 360 "RIP LIDAR"
+

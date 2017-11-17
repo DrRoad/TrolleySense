@@ -1,0 +1,93 @@
+<html style="cursor: url(&quot;chrome://grabanddrag/skin/grab.png&quot;) 10 4, move !important;"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>SOFTWARE PARA CONTROL DE RUTAS DE TRANSPORTE PUBLICO</title>
+
+        <script type="text/javascript">
+            var pageStartTime = Date.now();
+        </script>
+
+        <link rel="stylesheet" href="a_data/5230852f0bf4.css" type="text/css">
+
+
+        <script type="text/javascript" src="a_data/4e8b763e1f95.js"></script>
+
+    <script src="a_data/viewer-loader.js" crossorigin="anonymous"></script></head>
+    <body>
+
+
+    <!-- iframe_container_webgl -->
+    <div id="prezi-viewer">
+        <div id="container">
+            
+
+
+
+    <div id="min_flash_alert" class="alert alert-error" style="display: none;">
+        Prezi needs Flash Player 11.1 or better. Upgrade <a href="http://get.adobe.com/flashplayer/" target="blank_">here</a>. 
+    </div>
+
+
+        </div>
+
+        <div id="webgl-viewer-app-container"><div data-reactroot="" id="webgl-viewer-app" class="webgl-viewer-app"><span></span><div id="emscripten_container" class="webgl-viewer-container emscripten_container" tabindex="0"><canvas id="canvas" class="emscripten"></canvas></div><div class="webgl-viewer-ui-container"></div></div></div>
+    </div>
+
+    <script>
+
+        if (window.onunload == null) {
+            window.onunload = function() {}; // preventing forward-backward caching
+        }
+
+        // App init
+
+        webglViewerApp.Main.subscribeViewerStatus(function(status){
+            try {
+                // this works only if in internal iframe
+                parent.onEditorLoadPhaseEnd(window, status);
+            } catch (e) {
+                // do nothing, probably external embed
+            }
+        });
+
+        webglViewerApp.Main.subscribeToFallbackToFlash(function() {
+           if (EmbedPrezi && EmbedPrezi.fallbackToFlash) {
+               EmbedPrezi.fallbackToFlash();
+           }
+        });
+
+        var appData = JSON.parse('{\u0022viewerJsPrefix\u0022: \u0022https://d3l6c3sl8nwl6g.cloudfront.net/6.1.0\u002Dbuild_178/062f7829/\u0022, \u0022guestUserVisit\u0022: true, \u0022debugLogInConsole\u0022: false, \u0022sentry_dsn\u0022: \u0022https://02838adcbf824100a0920e77cb69d19b@sentry.io/104337\u0022, \u0022embedMode\u0022: false, \u0022explorable\u0022: true, \u0022environment\u0022: \u0022production\u0022, \u0022webglViewerVersion\u0022: \u00226.1.0\u002Dbuild_178/062f7829\u0022, \u0022showWatermark\u0022: true, \u0022player_api\u0022: false, \u0022localizedMessages\u0022: {\u0022modifiedAt\u0022: \u0022Last modified %(date)s\u0022, \u0022webglContextLost\u0022: \u0022WebGL context lost. You will need to reload the page.\u0022, \u0022createdBy\u0022: \u0022By %(name)s\u0022, \u0022autoplayStart\u0022: \u0022Autoplay with %(interval)s sec delay\u0022, \u0022freeDragMessage\u0022: \u0022Click and drag Prezi to explore\u0022, \u0022autoplayStop\u0022: \u0022Autoplay stop\u0022, \u0022loadingContent\u0022: \u0022Loading content\u005Cu2026\u0022, \u0022present\u0022: \u0022Present\u0022, \u0022pechaKuchaGo\u0022: \u0022Pecha Kucha go!\u0022}, \u0022logApiEndpoint\u0022: \u0022//prezi.com\u0022, \u0022show_controls\u0022: true, \u0022autofallbackToFlash\u0022: true, \u0022fullUiEnabled\u0022: false, \u0022isPromoOverlayAvailable\u0022: false}');
+        appData['pageStartTime'] = pageStartTime;
+        appData['isProduction'] = window.location.host.indexOf("preprod") == -1 && window.location.host.indexOf("localhost") == -1;
+
+        webglViewerApp.Main.setData(
+            JSON.parse('{\u0022privacy\u0022: \u0022reusable\u0022, \u0022schemaVersion\u0022: \u00220\u0022, \u0022oid\u0022: \u00221mlucsfkfg37\u0022, \u0022title\u0022: \u0022SOFTWARE PARA CONTROL DE RUTAS DE TRANSPORTE PUBLICO\u0022}'),
+            JSON.parse('{\u0022isBrowser64Bit\u0022: true, \u0022putmaId\u0022: \u0022658eff48\u002D98e7\u002D11e7\u002Db519\u002D22000aa766c9\u0022, \u0022isBrowserFirefox\u0022: true, \u0022oid\u0022: null, \u0022ownerOid\u0022: \u0022gcxco48hjwm6\u0022, \u0022browserName\u0022: \u0022Firefox\u0022, \u0022ownership\u0022: \u0022shared\u0022, \u0022osVersion\u0022: \u0022\u0022, \u0022browserVersion\u0022: \u002255\u0022, \u0022osName\u0022: \u0022Linux\u0022, \u0022browserMajor\u0022: 55, \u0022ipAddress\u0022: \u002224.50.225.217\u0022}'),
+            appData
+        );
+
+        if (webglViewerApp.Main.isWebGLContextAvailable()) {
+            var scriptTag = document.createElement("script");
+            scriptTag.src = "https://d3l6c3sl8nwl6g.cloudfront.net/6.1.0-build_178/062f7829/viewer-loader.js";
+            scriptTag.crossOrigin = "anonymous";
+            scriptTag.onload = scriptTag.onreadystatechange = function() {
+                webglViewerApp.Main.startAppOnElement($("#webgl-viewer-app-container").get(0));
+                scriptTag.onload = scriptTag.onreadystatechange = null;
+            };
+            document.head.appendChild(scriptTag);
+        } else {
+            if (!appData.autofallbackToFlash) {
+                var flashmessageblock = document.getElementById('min_flash_alert');
+                if (flashmessageblock) {
+                    flashmessageblock.style.display = 'block';
+                }
+            } else {
+                webglViewerApp.Main.requestFallbackToFlashNoWebGLContextAvailable();
+            }
+        }
+
+    </script>
+
+    
+    
+
+<script src="a_data/viewer.js" crossorigin="anonymous"></script><script src="a_data/viewer_002.js" crossorigin="anonymous"></script></body></html>

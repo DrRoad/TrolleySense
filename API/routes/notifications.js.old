@@ -1,0 +1,95 @@
+"use strict";
+
+// Imports
+const express = require('express'),
+      router = express.Router(),
+      pgp = require('../config/dbconnection'),
+    jwt = require('jsonwebtoken');
+
+// HANDLER FUNCTIONS
+function authorize(req, res, next) {
+    let token = req.body.token || req.headers['token'];
+    if (token) {
+        jwt.verify(token, process.env.SECRET_KEY, function(err, decode){
+            if (err)
+                res.status(500).json({ success: false, message: 'Invalid token.' });
+            else
+                // Get account details
+                next();
+        })
+        // res.json({ sucess: true, message: 'We have a token.' });
+    } else {
+        return res.status(401).json({ sucess: false, message: 'You need a token to access this end point.' });
+    }
+}
+function getNotifications(req, res, next) {
+    // Read token data
+    let token = req.body.token || req.headers['token'],
+        decoded = jwt.decode(token, process.env.SECRET_KEY), // config.secret
+        limit = req.headers["limit"] || req.headers["size"] || 10,
+        offset = req.headers["offset"] || ((req.headers["limit"] || req.headers["size"]) ? req.headers["page"]*limit : 0);
+    console.log(decoded.id);
+    // Get notifications
+    pgp.db.any(`
+        SELECT id, message, link, icon, read, created_at
+        FROM notifications
+        WHERE notifications.user_id=$1
+        ORDER BY id DESC
+        LIMIT $2 OFFSET $3
+    `, [decoded.id, limit, offset]
+    // On promisse return, act according to the response's status.
+    ).then(function (data) {
+        // If status 200, send json response...
+        return res.status(200).json({
+            success: true,
+            data: data,
+            message: 'Retrieved notifications.'
+        });
+    }).catch(function (err) {
+        return res.status(401).json({
+            success: false,
+            err: err,
+            message: 'Unnacounted error.'
+        });
+    });
+}
+function readNotification(req, res, next) {
+    // Get Token Data & Input
+    let token = req.body.token || req.headers['token'],
+        decoded = jwt.decode(token, process.env.SECRET_KEY),
+        input = {};
+    input.requestingUser = decoded.id;
+    // Validate
+    if (req.headers["id"] || req.body["id"] || req.headers["notification"] || req.body["notification"])
+        input.notification = req.headers["id"] || req.body["id"] || req.headers["notification"] || req.body["notification"];
+    else
+        return res.status(403).json({ sucess: false, message: 'You must indicate what \'notification\' you intend to mark as read/unread.' });
+    // Prepare query
+    let sql = `
+        UPDATE notifications
+        SET read = NOT read
+        WHERE user_id=${input.requestingUser} AND id=${input.notification}
+        RETURNING *`
+    pgp.db.one(sql, input).then(function (data) {
+        // Send response
+        return res.status(200).json({
+            success: true,
+            message: 'Notification status updated.',
+            data: (data.read?"read":"unread")
+        });
+    }).catch(function (err) {
+        console.log(err);
+        return res.status(404).json({
+            success: false,
+            message: 'Failed to locate said notification status.',
+        });
+    });
+}
+
+// ROUTE PATHS
+router.use('/', authorize);
+router.get('/', getNotifications);
+router.patch('/', readNotification);
+
+// Export router to master route.
+module.exports = router; 
