@@ -1,0 +1,27 @@
+{
+  "iOS" : [
+    {
+      "hash" : "222b057092caf6e9f6cb40cde755e60046ad9570a0938e0c06f118c9b64e3116",
+      "name" : "Polyline"
+    }
+  ],
+  "commitish" : "v4.1.1",
+  "watchOS" : [
+    {
+      "hash" : "c91daecb2e904c2ca5314b8139720f2c13252b487a52c966ca82305dee343756",
+      "name" : "Polyline"
+    }
+  ],
+  "tvOS" : [
+    {
+      "hash" : "1171ff6a8b42c29405303016a84c191517af7ed1b269b1629da653132aae16cb",
+      "name" : "Polyline"
+    }
+  ],
+  "Mac" : [
+    {
+      "hash" : "5641ef1312b476edc583013ef9a1d36884609aaf825802cf8da64eafba7bf158",
+      "name" : "Polyline"
+    }
+  ]
+}

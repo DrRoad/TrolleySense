@@ -1,0 +1,405 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A6D14DE1F48D1020035E8D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6D14DD1F48D1020035E8D4 /* AppDelegate.m */; };
+		2A6D14E11F48D1020035E8D4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6D14E01F48D1020035E8D4 /* ViewController.m */; };
+		2A6D14E41F48D1020035E8D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A6D14E21F48D1020035E8D4 /* Main.storyboard */; };
+		2A6D14E61F48D1020035E8D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A6D14E51F48D1020035E8D4 /* Assets.xcassets */; };
+		2A6D14E91F48D1020035E8D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A6D14E71F48D1020035E8D4 /* LaunchScreen.storyboard */; };
+		2A6D14EC1F48D1020035E8D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6D14EB1F48D1020035E8D4 /* main.m */; };
+		2A6D15001F48E6BB0035E8D4 /* center.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 2A6D14FF1F48E6BB0035E8D4 /* center.geojson */; };
+		2A6D15021F48E78E0035E8D4 /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6D14F91F48DF370035E8D4 /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2A6D15041F48E78E0035E8D4 /* MapboxDirections.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6D14F71F48DF370035E8D4 /* MapboxDirections.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2A6D15061F48E78E0035E8D4 /* Polyline.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6D14F81F48DF370035E8D4 /* Polyline.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2A6D150A1F491B2D0035E8D4 /* TrolleysTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6D15091F491B2D0035E8D4 /* TrolleysTableViewController.m */; };
+		2A6D150C1F493F4A0035E8D4 /* norte.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 2A6D150B1F493F4A0035E8D4 /* norte.geojson */; };
+		2A6D150E1F494AC50035E8D4 /* sur.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 2A6D150D1F494AC50035E8D4 /* sur.geojson */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2A6D15071F48E78E0035E8D4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2A6D15061F48E78E0035E8D4 /* Polyline.framework in Embed Frameworks */,
+				2A6D15021F48E78E0035E8D4 /* Mapbox.framework in Embed Frameworks */,
+				2A6D15041F48E78E0035E8D4 /* MapboxDirections.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2A6D14D91F48D1020035E8D4 /* controlley.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = controlley.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A6D14DC1F48D1020035E8D4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2A6D14DD1F48D1020035E8D4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2A6D14DF1F48D1020035E8D4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2A6D14E01F48D1020035E8D4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2A6D14E31F48D1020035E8D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2A6D14E51F48D1020035E8D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2A6D14E81F48D1020035E8D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2A6D14EA1F48D1020035E8D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A6D14EB1F48D1020035E8D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2A6D14F71F48DF370035E8D4 /* MapboxDirections.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapboxDirections.framework; path = Build/iOS/MapboxDirections.framework; sourceTree = "<group>"; };
+		2A6D14F81F48DF370035E8D4 /* Polyline.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Polyline.framework; path = Build/iOS/Polyline.framework; sourceTree = "<group>"; };
+		2A6D14F91F48DF370035E8D4 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = Build/iOS/Mapbox.framework; sourceTree = "<group>"; };
+		2A6D14FF1F48E6BB0035E8D4 /* center.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = center.geojson; sourceTree = "<group>"; };
+		2A6D15081F491B2D0035E8D4 /* TrolleysTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrolleysTableViewController.h; sourceTree = "<group>"; };
+		2A6D15091F491B2D0035E8D4 /* TrolleysTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrolleysTableViewController.m; sourceTree = "<group>"; };
+		2A6D150B1F493F4A0035E8D4 /* norte.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = norte.geojson; sourceTree = "<group>"; };
+		2A6D150D1F494AC50035E8D4 /* sur.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sur.geojson; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A6D14D61F48D1020035E8D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A6D14D01F48D1020035E8D4 = {
+			isa = PBXGroup;
+			children = (
+				2A6D14DB1F48D1020035E8D4 /* controlley */,
+				2A6D14DA1F48D1020035E8D4 /* Products */,
+				2A6D14F21F48DEE50035E8D4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2A6D14DA1F48D1020035E8D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2A6D14D91F48D1020035E8D4 /* controlley.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A6D14DB1F48D1020035E8D4 /* controlley */ = {
+			isa = PBXGroup;
+			children = (
+				2A6D14DC1F48D1020035E8D4 /* AppDelegate.h */,
+				2A6D14DD1F48D1020035E8D4 /* AppDelegate.m */,
+				2A6D14DF1F48D1020035E8D4 /* ViewController.h */,
+				2A6D14E01F48D1020035E8D4 /* ViewController.m */,
+				2A6D14E21F48D1020035E8D4 /* Main.storyboard */,
+				2A6D14E51F48D1020035E8D4 /* Assets.xcassets */,
+				2A6D14E71F48D1020035E8D4 /* LaunchScreen.storyboard */,
+				2A6D14EA1F48D1020035E8D4 /* Info.plist */,
+				2A6D14EB1F48D1020035E8D4 /* main.m */,
+				2A6D14FF1F48E6BB0035E8D4 /* center.geojson */,
+				2A6D150D1F494AC50035E8D4 /* sur.geojson */,
+				2A6D150B1F493F4A0035E8D4 /* norte.geojson */,
+				2A6D15081F491B2D0035E8D4 /* TrolleysTableViewController.h */,
+				2A6D15091F491B2D0035E8D4 /* TrolleysTableViewController.m */,
+			);
+			path = controlley;
+			sourceTree = "<group>";
+		};
+		2A6D14F21F48DEE50035E8D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A6D14F91F48DF370035E8D4 /* Mapbox.framework */,
+				2A6D14F71F48DF370035E8D4 /* MapboxDirections.framework */,
+				2A6D14F81F48DF370035E8D4 /* Polyline.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2A6D14D81F48D1020035E8D4 /* controlley */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A6D14EF1F48D1020035E8D4 /* Build configuration list for PBXNativeTarget "controlley" */;
+			buildPhases = (
+				2A6D14D51F48D1020035E8D4 /* Sources */,
+				2A6D14D61F48D1020035E8D4 /* Frameworks */,
+				2A6D14D71F48D1020035E8D4 /* Resources */,
+				2A6D14FA1F48DF510035E8D4 /* ShellScript */,
+				2A6D15071F48E78E0035E8D4 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = controlley;
+			productName = controlley;
+			productReference = 2A6D14D91F48D1020035E8D4 /* controlley.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A6D14D11F48D1020035E8D4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = va2ron1;
+				TargetAttributes = {
+					2A6D14D81F48D1020035E8D4 = {
+						CreatedOnToolsVersion = 9.0;
+					};
+				};
+			};
+			buildConfigurationList = 2A6D14D41F48D1020035E8D4 /* Build configuration list for PBXProject "controlley" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2A6D14D01F48D1020035E8D4;
+			productRefGroup = 2A6D14DA1F48D1020035E8D4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2A6D14D81F48D1020035E8D4 /* controlley */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2A6D14D71F48D1020035E8D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A6D150E1F494AC50035E8D4 /* sur.geojson in Resources */,
+				2A6D14E91F48D1020035E8D4 /* LaunchScreen.storyboard in Resources */,
+				2A6D150C1F493F4A0035E8D4 /* norte.geojson in Resources */,
+				2A6D14E61F48D1020035E8D4 /* Assets.xcassets in Resources */,
+				2A6D15001F48E6BB0035E8D4 /* center.geojson in Resources */,
+				2A6D14E41F48D1020035E8D4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A6D14FA1F48DF510035E8D4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A6D14D51F48D1020035E8D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A6D14E11F48D1020035E8D4 /* ViewController.m in Sources */,
+				2A6D150A1F491B2D0035E8D4 /* TrolleysTableViewController.m in Sources */,
+				2A6D14EC1F48D1020035E8D4 /* main.m in Sources */,
+				2A6D14DE1F48D1020035E8D4 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2A6D14E21F48D1020035E8D4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A6D14E31F48D1020035E8D4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2A6D14E71F48D1020035E8D4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A6D14E81F48D1020035E8D4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2A6D14ED1F48D1020035E8D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2A6D14EE1F48D1020035E8D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2A6D14F01F48D1020035E8D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				DEVELOPMENT_TEAM = 6WXZ7X2MFT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/Build/iOS/Mapbox.framework",
+					"$(PROJECT_DIR)/Build/iOS",
+				);
+				INFOPLIST_FILE = controlley/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.va2ron1.controlley;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2A6D14F11F48D1020035E8D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				DEVELOPMENT_TEAM = 6WXZ7X2MFT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/Build/iOS/Mapbox.framework",
+					"$(PROJECT_DIR)/Build/iOS",
+				);
+				INFOPLIST_FILE = controlley/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.va2ron1.controlley;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A6D14D41F48D1020035E8D4 /* Build configuration list for PBXProject "controlley" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A6D14ED1F48D1020035E8D4 /* Debug */,
+				2A6D14EE1F48D1020035E8D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A6D14EF1F48D1020035E8D4 /* Build configuration list for PBXNativeTarget "controlley" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A6D14F01F48D1020035E8D4 /* Debug */,
+				2A6D14F11F48D1020035E8D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A6D14D11F48D1020035E8D4 /* Project object */;
+}

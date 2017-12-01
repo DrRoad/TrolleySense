@@ -1,0 +1,27 @@
+{
+  "iOS" : [
+    {
+      "hash" : "c4c9501ea7e7fc242ed36cdc7f899667066ca1c73ca9eac3b500c81dd7f799d8",
+      "name" : "MapboxDirections"
+    }
+  ],
+  "commitish" : "v0.10.1",
+  "watchOS" : [
+    {
+      "hash" : "4852eafddf2932e2e9a66eed632ffc52bbff73cd9d03762c136f60c9bb40f1fb",
+      "name" : "MapboxDirections"
+    }
+  ],
+  "tvOS" : [
+    {
+      "hash" : "d0e1757a26813c63ae6ba1b00345e94a07f54a6260d5b4b5360baf84c138a5aa",
+      "name" : "MapboxDirections"
+    }
+  ],
+  "Mac" : [
+    {
+      "hash" : "ceb760821c0b9d44bd5be1091397ab98498246ac546faa5ab215192363ef77c5",
+      "name" : "MapboxDirections"
+    }
+  ]
+}
