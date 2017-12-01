@@ -1,4 +1,4 @@
-/**
+  /**
  * Gruntfile
  *
  * This Node script is executed when you run `grunt`-- and also when

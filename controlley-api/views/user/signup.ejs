@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-sm-8 col-md-6 mx-auto">
+    <h1 class="form-signin-heading">Crear cuenta</h1>
+    <form action="/user/create" method="post" class="form-signin">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Nombre" name="first_name">
+        <input type="text" class="form-control" placeholder="Apellidos" name="last_names">
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" placeholder="Correo electrónico" name="email">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" placeholder="Contraseña" name="password">
+        <input type="password" class="form-control" placeholder="Confirmación de contraseña" name="confirmation">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Código de acceso" aria-describedby="company_code_help" name="company_code">
+        <small id="company_code_help" class="form-text text-muted">Si tiene un código de acceso, éntrelo aquí.</small>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" name="agree"  >
+          Estoy de acuerdo con los términos y condiciones.
+        </label>
+      </div>
+      <br>
+      <input type="submit" class="btn btn-lg btn-primary btn-block" value="Crear cuenta">
+      <input type="hidden" name="_web" value="true">
+      <input type="hidden" name="_csrf" value="<%= _csrf %>">
+    </form>
+  </div>
+</div>

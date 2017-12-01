@@ -3,7 +3,7 @@ Servicio al Público
 		Mapa/@Mapa
 			Trolleys
 				ID
-				Nombre
+				Nombre..
 				Foto
 				Geo
 				ETA
@@ -35,14 +35,60 @@ Controlley
 			Paradas (CRUD)
 		Datos Recopilados
 			Conductores
-
+				Historial de carretera
+					Vehículos 	Rutas 	Timestamp de inicio 	Timestamp de salida
+				Profile
+					Velocidad promedio
+					
 			Vehículos
-
+				Velocidad promedio
+				Personas recogidas
 			Rutas
-
+				Tiempo estimado
 			Paradas
+				Frecuencia de uso
+				Más usadas (sort)
 
 			Lugares de interés
 
 		Lugares de interés (CRUD)
 			Promover
+
+
+
+Rehacer Página de Imaginary en Wordpress
+    porque necesitamos una manera efectiva de notificar de updates a los usuarios y qué mejor manera que un blog.
+    secciones
+        Imaginary
+            Home page (similar)
+            Blog
+            Teleprompter
+                About
+                Blog
+                Feature comparison
+                System Requirements
+                Documentation
+                Online
+            Controlley - Public Transportation
+                About
+                &Blog
+            The Team
+                Páginas personales
+            Chronology?
+            Contact Us
+
+Reunión Engine
+    Página de Imaginary
+        Tema
+        Re-estructurar
+    Servidor Imaginary
+        Actualizar
+        Actualizar Wordpress
+        Verificar estado del firewall
+    Teleprompter
+        Tiny Core Linux
+    Preguntar a Luis
+        Visitamos el site de IoT Playground, la forma de submisión pide información sobre la compañía o entidad.
+        ¿Hay alguna información adicional que vallan a necesitar más tarde para ir preparándola desde ahora?
+    Juego Víctor
+        Assets?
